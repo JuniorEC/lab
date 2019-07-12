@@ -1,0 +1,16 @@
+extends layout
+block content
+    h1.
+        User list
+    a(href="/novousuario") Adicionar usuario
+    #userList
+        table
+            thead
+                th Username
+                th Email
+                th Delete?
+            tbody
+    ul
+        each user, i in userlist
+            li
+                a(href="mailto:#{user.email}")= user.username
